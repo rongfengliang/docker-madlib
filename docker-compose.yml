@@ -26,7 +26,18 @@ services:
       - 8080:8080
     depends_on:
       - db
-
+  graphql-engine:
+    image: hasura/graphql-engine:v1.0.0-alpha30
+    ports:
+    - "9090:8080"
+    depends_on:
+    - db
+    environment:
+    - "POSTGRES_PASSWORD:postgres"
+    command: >
+      /bin/sh -c "
+      graphql-engine --database-url postgres://postgres:root@db:5432/sample serve --enable-console;
+      "
 
 networks:
   default:
