@@ -16,4 +16,7 @@
 7) Go to "madlib" schema and check the install.
 
 **Notes:**
- - If you want to access through Navicat or similar software, just replace the "db" server host by 127.0.0.1 or localhost   
+ - If you want to access through Navicat or similar software, just replace the "db" server host by 127.0.0.1 or localhost 
+ 
+8)  hasura/graphql-engine address 
+    - http://localhost:9090
